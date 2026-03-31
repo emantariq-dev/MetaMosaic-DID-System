@@ -1,6 +1,5 @@
 # MetaMosaic – Decentralized Identity System
 
----
 
 ## 🔹 Description
 
@@ -8,7 +7,6 @@ MetaMosaic is a secure identity management system designed for the metaverse.
 It leverages blockchain technology, Decentralized Identifiers (DIDs), and Zero-Knowledge Proofs (ZKP) to provide privacy-preserving, tamper-proof, and verifiable digital identities for users in virtual reality environments.
 
 ## 🔹 Project Structure
-```text
 
 MetaMosaic-DID-System/
 ├─ Dashboard/             # React.js frontend dashboard for DID management
@@ -19,7 +17,6 @@ MetaMosaic-DID-System/
 ├─ README.md              # Project documentation
 └─ contracts/             # Smart contracts (Verifier.sol, DIDRegistry.sol, etc.)
 
----
 
 ## 🔹 Features
 
