@@ -2,7 +2,8 @@ MetaMosaic – Decentralized Identity System
 
 🔹 Description
 
-MetaMosaic is a secure identity management system designed for the metaverse. It leverages blockchain technology, Decentralized Identifiers (DIDs), and Zero-Knowledge Proofs (ZKP) to provide privacy-preserving, tamper-proof, and verifiable digital identities for users in virtual reality environments.
+MetaMosaic is a secure identity management system designed for the metaverse. 
+It leverages blockchain technology, Decentralized Identifiers (DIDs), and Zero-Knowledge Proofs (ZKP) to provide privacy-preserving, tamper-proof, and verifiable digital identities for users in virtual reality environments.
 
 🔹 Project Structure
 
