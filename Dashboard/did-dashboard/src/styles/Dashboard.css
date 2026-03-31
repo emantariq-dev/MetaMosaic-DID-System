@@ -1,0 +1,176 @@
+/* ================= THEME (tweak freely) ================= */
+:root{
+  --bg1:#e9eff7;
+  --bg2:#d4dce8;
+  --text:#0f1b2d;
+
+  --primary:#2d6cdf;        /* blue */
+  --primary-700:#1e4fb0;
+  --accent:#7c3aed;         /* violet accent for heading */
+  --success:#22c55e;        /* green */
+  --success-700:#15803d;
+  --warning:#f59e0b;        /* amber */
+  --danger:#ef4444;         /* red */
+
+  --panel-bg:rgba(255,255,255,0.9);
+  --panel-border:rgba(255,255,255,0.7);
+
+  --shadow:0 12px 28px rgba(15,27,45,.14);
+  --shadow-lg:0 20px 44px rgba(15,27,45,.20);
+
+  --radius:18px;
+  --radius-sm:14px;
+}
+
+/* ================= BASE LAYOUT ================= */
+.dashboard-container{
+  width:100%;
+  min-height:100vh;
+
+  /* Background image + gradient overlay for readability */
+  background: 
+    linear-gradient(to right, rgba(233,239,247,0.85), rgba(212,220,232,0.85)),
+    url("C:\Users\Pak\Downloads\8311143_12352.jpg") no-repeat center center fixed;
+  background-size: cover;
+
+  padding:30px 24px 44px;
+  font-family:'Poppins',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+  color:var(--text);
+  display:flex; flex-direction:column; align-items:center;
+  position:relative;
+}
+
+/* ================= CENTERED TITLE ================= */
+/* ================= FIXED HEADING ================= */
+.dashboard-title{
+  margin:0 0 12px;
+  font-size:44px;
+  font-weight:800;
+  letter-spacing:1.4px;
+  text-align:center;          /* <<< this keeps it centered properly */
+  text-transform:uppercase;
+  background:linear-gradient(90deg,var(--accent),var(--primary));
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  filter:drop-shadow(0 2px 6px rgba(0,0,0,.15));
+}
+.title-underline{
+  width:160px; height:6px;
+  border-radius:999px;
+  background:linear-gradient(90deg,var(--accent),var(--primary));
+  margin:10px auto 14px;      /* <<< auto centers underline */
+  opacity:   .9;
+}
+
+/* ================= SIDE PANEL (glassy card) ================= */
+.side-panel{
+  position:absolute; top:132px; left:44px; z-index:10;
+  width:100%; max-width:380px;
+  background:var(--panel-bg);
+  border:1px solid var(--panel-border);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  backdrop-filter:saturate(150%) blur(12px);
+  padding:26px 22px 24px;
+  text-align:center;
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+.side-panel:hover{ transform:translateY(-2px); box-shadow:var(--shadow-lg); }
+
+/* decorative top bar */
+.side-panel::before{
+  content:"";
+  position:absolute; inset:0 0 auto 0; height:6px; border-top-left-radius:var(--radius); border-top-right-radius:var(--radius);
+  background:linear-gradient(90deg,var(--accent),var(--primary));
+  opacity:.9;
+}
+
+.side-panel h3{
+  margin:8px 0 12px; font-size:18px; font-weight:800; color:#1e2a3a;
+}
+
+/* account address — single line + copy-friendly */
+.account-address{
+  display:block; width:100%;
+  padding:12px 14px; margin:6px 0 14px;
+  font-size:14px; font-weight:600; color:#243042;
+  background:#f6f8fe;
+  border:1px dashed rgba(45,108,223,.35);
+  border-radius:12px; text-align:center;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis; /* keep one line */
+  cursor:default;
+}
+
+/* badges for status/admin */
+.badge{
+  display:inline-block; padding:7px 12px; font-size:12px; font-weight:800;
+  border-radius:999px; background:#eef2ff; color:var(--primary-700); margin:0 6px 10px;
+}
+.badge--danger{ background:#fee2e2; color:#b91c1c; }
+.badge--ok{ background:#dcfce7; color:#166534; }
+
+/* ================= BUTTONS (pill + depth) ================= */
+.btn, .btn-primary, .btn-success{
+  width:100%; padding:13px 16px; margin-top:12px;
+  border:none; border-radius:999px;
+  font-size:16px; font-weight:800; letter-spacing:.35px;
+  color:#fff; cursor:pointer;
+  box-shadow:0 10px 20px rgba(45,108,223,.25);
+  transition:transform .15s ease, box-shadow .15s ease, filter .15s ease;
+}
+.btn-primary{ background:linear-gradient(145deg,var(--primary),var(--primary-700)); }
+.btn-success{ background:linear-gradient(145deg,var(--success),var(--success-700)); }
+.btn:hover{ transform:translateY(-1px); box-shadow:0 14px 26px rgba(45,108,223,.30); }
+.btn:active{ transform:translateY(0); filter:brightness(.98); }
+.btn:disabled{ background:#bfc8db !important; box-shadow:none; cursor:not-allowed; color:#f2f4f8; }
+
+/* yellow CTA look for "Verify with ZKP" if you add class .btn-cta */
+.btn-cta{
+  background:linear-gradient(145deg,#facc15,#f59e0b);
+  box-shadow:0 10px 20px rgba(245,158,11,.25);
+}
+
+/* ================= CHARTS GRID ================= */
+/* extra space from the side panel: widen the left margin */
+.charts-container{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(360px, 1fr));
+  grid-auto-rows:auto;
+  gap:26px;
+  width:calc(100% - 520px);     /* <— creates clear gap from the left panel */
+  max-width:1280px;
+  margin-left:480px;            /* <— pushes charts right, leaving visible space */
+  margin-top:22px;
+}
+
+/* chart cards */
+.chart{
+  background:var(--panel-bg);
+  border:1px solid var(--panel-border);
+  border-radius:var(--radius-sm);
+  box-shadow:var(--shadow);
+  padding:24px 18px;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  text-align:center;
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.chart:hover{ transform:translateY(-2px); box-shadow:var(--shadow-lg); }
+
+/* subtle header inside cards (works if you add a small label) */
+.chart .chart-title{
+  width:100%; text-align:left; font-weight:800; font-size:14px;
+  color:#1d2636; margin-bottom:12px; letter-spacing:.3px;
+}
+
+canvas{ width:100% !important; height:265px !important; }
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1200px){
+  .charts-container{ width:100%; margin-left:0; }
+  .side-panel{ position:static; max-width:720px; margin:10px auto 24px; }
+}
+@media (max-width: 900px){
+  .charts-container{ grid-template-columns:1fr; gap:20px; }
+  .chart{ width:100%; }
+}

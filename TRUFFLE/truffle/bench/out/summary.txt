@@ -1,0 +1,21 @@
+RESULTS — SUMMARY
+========================================================================
+Network ID          : 1760677252878
+Contract            : SecureDIDRegistry
+VerifyFn            : verifyDIDWithZKP
+
+Performance (Latency, ms) & Success
+  create    9/9 (100.00%)  avg=92.8  p50=91.0  p90=109.4
+  verify    9/9 (100.00%)  avg=2128.1  p50=1989.0  p90=3165.0
+  revoke    9/9 (100.00%)  avg=98.4  p50=82.0  p90=150.6
+
+Transaction Reliability : 100.00%
+Admin Decentralization  : 33.33%
+
+Baseline TPS            : 1.25  (ops=27, elapsedMs=21683)
+
+Scalability (per scenario)
+  trials=10  conc=10  conf=0  TPS=1.15  minedOps=30 (C/V/R=10/10/10)
+  trials=20  conc=10  conf=0  TPS=0.88  minedOps=60 (C/V/R=20/20/20)
+  trials=50  conc=10  conf=0  TPS=1.35  minedOps=150 (C/V/R=50/50/50)
+  trials=100  conc=10  conf=0  TPS=2.24  minedOps=300 (C/V/R=100/100/100)

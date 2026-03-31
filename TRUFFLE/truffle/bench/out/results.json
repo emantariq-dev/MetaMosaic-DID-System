@@ -1,0 +1,161 @@
+{
+  "meta": {
+    "networkId": 1760677252878,
+    "contract": "SecureDIDRegistry",
+    "verifyFn": "verifyDIDWithZKP",
+    "trialsRequested": 9,
+    "confirmations": 0,
+    "timestamp": "2025-10-17T05:07:23.585Z"
+  },
+  "lifecycleSupport": {
+    "create": true,
+    "verify": true,
+    "revoke": true,
+    "reverify": false,
+    "refund": true
+  },
+  "aggregates": {
+    "create": {
+      "count": 9,
+      "success": 9,
+      "successRatePct": 100,
+      "chainLatencyMs": {
+        "avg": 92.77777777777777,
+        "p50": 91,
+        "p90": 109.4
+      },
+      "avgGas": 0,
+      "p50Gas": 0,
+      "p90Gas": 0
+    },
+    "verify": {
+      "count": 9,
+      "success": 9,
+      "successRatePct": 100,
+      "chainLatencyMs": {
+        "avg": 2128.1111111111113,
+        "p50": 1989,
+        "p90": 3165
+      },
+      "avgGas": 0,
+      "p50Gas": 0,
+      "p90Gas": 0
+    },
+    "revoke": {
+      "count": 9,
+      "success": 9,
+      "successRatePct": 100,
+      "chainLatencyMs": {
+        "avg": 98.44444444444444,
+        "p50": 82,
+        "p90": 150.6
+      },
+      "avgGas": 0,
+      "p50Gas": 0,
+      "p90Gas": 0
+    }
+  },
+  "verificationLatency": {
+    "chainMs": {
+      "avg": 2128.1111111111113,
+      "p50": 1989,
+      "p90": 3165
+    },
+    "endToEndMs": {
+      "avg": 2128.1111111111113,
+      "p50": 1989,
+      "p90": 3165
+    }
+  },
+  "verificationAccuracyPct": 100,
+  "duplicatePreventionPct": 100,
+  "depositRefund": {
+    "expectedWei": 10000000000000000,
+    "avgWei": 10000000000000000,
+    "minWei": 10000000000000000,
+    "maxWei": 10000000000000000,
+    "accuracyPct": 100
+  },
+  "revocationEfficiency": {
+    "msAvg": 98.44444444444444,
+    "msP50": 82,
+    "msP90": 150.6,
+    "gasAvg": 0,
+    "gasP50": 0,
+    "gasP90": 0
+  },
+  "scalability": [
+    {
+      "trials": 10,
+      "concurrency": 10,
+      "confirmations": 0,
+      "tpsApprox": 1.1530922089403084,
+      "minedOps": 30,
+      "minedCreates": 10,
+      "minedVerifies": 10,
+      "minedRevokes": 10,
+      "avgMsCreate": 0,
+      "avgMsVerify": 0,
+      "avgMsRevoke": 0,
+      "avgGasCreate": 0,
+      "avgGasVerify": 0,
+      "avgGasRevoke": 0
+    },
+    {
+      "trials": 20,
+      "concurrency": 10,
+      "confirmations": 0,
+      "tpsApprox": 0.8750820389411508,
+      "minedOps": 60,
+      "minedCreates": 20,
+      "minedVerifies": 20,
+      "minedRevokes": 20,
+      "avgMsCreate": 0,
+      "avgMsVerify": 0,
+      "avgMsRevoke": 0,
+      "avgGasCreate": 0,
+      "avgGasVerify": 0,
+      "avgGasRevoke": 0
+    },
+    {
+      "trials": 50,
+      "concurrency": 10,
+      "confirmations": 0,
+      "tpsApprox": 1.3488116968950354,
+      "minedOps": 150,
+      "minedCreates": 50,
+      "minedVerifies": 50,
+      "minedRevokes": 50,
+      "avgMsCreate": 0,
+      "avgMsVerify": 0,
+      "avgMsRevoke": 0,
+      "avgGasCreate": 0,
+      "avgGasVerify": 0,
+      "avgGasRevoke": 0
+    },
+    {
+      "trials": 100,
+      "concurrency": 10,
+      "confirmations": 0,
+      "tpsApprox": 2.2400597349262643,
+      "minedOps": 300,
+      "minedCreates": 100,
+      "minedVerifies": 100,
+      "minedRevokes": 100,
+      "avgMsCreate": 0,
+      "avgMsVerify": 0,
+      "avgMsRevoke": 0,
+      "avgGasCreate": 0,
+      "avgGasVerify": 0,
+      "avgGasRevoke": 0
+    }
+  ],
+  "transactionReliabilityPct": 100,
+  "adminDecentralizationIdxPct": 33.33333333333333,
+  "baseline": {
+    "elapsedMs": 21683,
+    "ops": 27,
+    "tpsApprox": 1.2452151455056957
+  },
+  "scalabilityErrorsSample": []
+}

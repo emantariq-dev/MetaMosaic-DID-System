@@ -1,0 +1,36 @@
+def mimc_round(field left, field right, field key, field c) -> field {
+    field t = left + key + c;
+    field t2 = t * t;
+    field t4 = t2 * t2;
+    field t7 = t4 * t2 * t;
+    return t7 + right;
+}
+
+def mimc_hash(field xl, field xr, field key) -> field {
+    field r1 = mimc_round(xl, xr, key, 1);
+    field r2 = mimc_round(r1, xl, key, 2);
+    field r3 = mimc_round(r2, r1, key, 3);
+    field r4 = mimc_round(r3, r2, key, 4);
+    field r5 = mimc_round(r4, r3, key, 5);
+    field r6 = mimc_round(r5, r4, key, 6);
+    return r6;
+}
+
+def main(private field secret, private field key, public field expectedHash, public field userAddressHash) -> () {
+    field h = mimc_hash(secret, secret, key);
+    assert(h == expectedHash);
+    assert(secret == userAddressHash);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

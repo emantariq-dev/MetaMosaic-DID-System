@@ -1,0 +1,15 @@
+{
+  "trials": 9,
+  "confirmations": 0,
+  "contract": "SecureDIDRegistry",
+  "createDID": "createDID",
+  "verify": "verifyDID",
+  "revoke": "revokeDID",
+  "useZKP": true,
+  "proofJson": "./zokrates/proof.json",
+  "publicInputsJson": "./zokrates/zkp_inputs_snippet.json",
+  "scalabilityTrials": [10, 20, 50, 100],
+  "scalabilityConcurrency": 10,
+  "baselineConcurrency": 1,
+  "frontendOverheadMs": 0
+}
