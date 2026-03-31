@@ -6,17 +6,19 @@
 MetaMosaic is a secure identity management system designed for the metaverse. 
 It leverages blockchain technology, Decentralized Identifiers (DIDs), and Zero-Knowledge Proofs (ZKP) to provide privacy-preserving, tamper-proof, and verifiable digital identities for users in virtual reality environments.
 
+
 ## 🔹 Project Structure
 
+```text
 MetaMosaic-DID-System/
 ├─ Dashboard/             # React.js frontend dashboard for DID management
 ├─ Truffle/               # Solidity smart contracts and deployment scripts
-├─ VR classroom/                   # VR App integration files
+├─ VR classroom/          # VR App integration files
 ├─ compute.js             # Script to compute ZKP inputs
-├─ mergeInputsIntoProof.js# Merges ZKP inputs with proof files
+├─ mergeInputsIntoProof.js # Merges ZKP inputs with proof files
 ├─ README.md              # Project documentation
 └─ contracts/             # Smart contracts (Verifier.sol, DIDRegistry.sol, etc.)
-
+```
 
 ## 🔹 Features
 
